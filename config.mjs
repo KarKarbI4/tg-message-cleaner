@@ -4,7 +4,7 @@ dotenv.config();
 
 export const config = {
   tg: {
-    appId: process.env.TG_APP_ID,
-    appHash: process.env.TG_APP_HASH
+    apiId: Number(process.env.TG_API_ID),
+    apiHash: process.env.TG_API_HASH
   }
 }

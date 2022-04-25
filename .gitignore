@@ -1,3 +1,6 @@
+# Session storage cache files
+sessionStorage/
+
 # Logs
 logs
 *.log
