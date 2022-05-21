@@ -1,6 +1,9 @@
 # Session storage cache files
 sessionStorage/
 
+# tmp files
+tmp/
+
 # Logs
 logs
 *.log

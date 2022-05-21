@@ -1,16 +1,21 @@
 import { config } from "./config.mjs";
 import { TelegramClient } from "telegram";
-import { StoreSession } from "telegram/sessions/index.js";
 import input from "input";
+import { StoreSession } from "telegram/sessions/index.js";
 
 const storeSession = new StoreSession("./sessionStorage");
 
-async function startTelegramAndloginIfNeeded() {
-  console.log("Loading interactive example...");
+export async function startTelegramAndloginIfNeeded() {
+  console.log("Starting...");
 
-  const client = new TelegramClient(storeSession, config.tg.apiId, config.tg.apiHash, {
-    connectionRetries: 5,
-  });
+  const client = new TelegramClient(
+    storeSession,
+    config.tg.apiId,
+    config.tg.apiHash,
+    {
+      connectionRetries: 5,
+    }
+  );
 
   await client.start({
     phoneNumber: async () => await input.text("Please enter your number: "),
@@ -21,11 +26,6 @@ async function startTelegramAndloginIfNeeded() {
   });
 
   console.log("You should now be connected.");
-  console.log(client.session.save()); // Save this string to avoid logging in again
 
   return client;
 }
-
-const client = await startTelegramAndloginIfNeeded();
-
-await client.sendMessage("me", { message: "Hello!" });

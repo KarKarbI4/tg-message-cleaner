@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.mjs",
-  "type":"module",
+  "type": "module",
   "scripts": {
-    "start": "node index.mjs",
+    "start": "node ./src/index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
@@ -17,9 +17,11 @@
   "license": "ISC",
   "devDependencies": {
     "input": "^1.0.1",
-    "telegram": "^2.6.13"
+    "telegram": "2.8.2"
   },
   "dependencies": {
-    "dotenv": "^16.0.0"
+    "cli-progress": "^3.10.0",
+    "dotenv": "^16.0.0",
+    "prettier": "^2.6.2"
   }
 }
