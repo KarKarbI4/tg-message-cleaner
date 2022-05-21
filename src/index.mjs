@@ -71,7 +71,5 @@ async function findAndClearMessages({
 
   console.log("Deleting...");
   await deleteMessages({ client, messages, revoke });
-  console.log(
-    `Successfully deleted messages written by me with keyword ${keyword}`
-  );
+  console.log(`Successfully deleted messages with keyword ${keyword}`);
 }
