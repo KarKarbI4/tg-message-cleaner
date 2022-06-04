@@ -18,5 +18,5 @@ cd ./tg-message-cleaner
 pnpm i
 
 # launch script
-npm run start -- keyword
+pnpm run start -- keyword
 ```
