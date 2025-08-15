@@ -6,8 +6,8 @@ run();
 
 async function run() {
   // process keyword
-  const keyword = process.argv[3];
-
+  const keyword = process.argv[2];
+  console.log(process.argv);
   if (!keyword) {
     throw new Error("Provide keyword: npm run start -- keyword");
   }

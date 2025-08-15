@@ -17,11 +17,12 @@
   "license": "ISC",
   "devDependencies": {
     "input": "^1.0.1",
-    "telegram": "2.8.2"
+    "telegram": "2.26.22"
   },
   "dependencies": {
     "cli-progress": "^3.10.0",
     "dotenv": "^16.0.0",
+    "pnpm": "10.14.0",
     "prettier": "^2.6.2"
   }
 }
